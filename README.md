@@ -12,7 +12,7 @@ The website will have the following specification:
  - Users manage their bookmarks
 
 #### User Stories:
-```sh
+```
 As a user
 In order to select one
 I want to see a list of my bookmarks
