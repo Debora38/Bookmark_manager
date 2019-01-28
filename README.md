@@ -18,7 +18,8 @@ In order to select one
 I want to see a list of my bookmarks
 ```
 
-|Display    | Bookmarks|
-|----------|------------|
-|show()    | <----- bookmarks|
-|          | add()|
+|View     | App          | Controller    | DB      |
+|---------|------------------|-----------|---------|
+|bookmarks.erb| Bookmarks_Manager| Bookmark | bookmarks |
+|         |     app.rb   |     show()   |           |
+|         |        |     add()    |           |
