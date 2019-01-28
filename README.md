@@ -18,7 +18,7 @@ In order to select one
 I want to see a list of my bookmarks
 ```
 
-|Display    |   Bookmarks|
+|Display    | Bookmarks|
 |----------|------------|
 |show()    | <----- bookmarks|
 |          | add()|
