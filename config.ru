@@ -1,3 +1,3 @@
 require './lib/app'
 
-run Bookmarks
+run Bookmarks_Manager

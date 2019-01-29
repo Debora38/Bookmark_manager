@@ -6,7 +6,7 @@ ENV["RAILS_ENV"] ||= 'test'
 
 require File.join(File.dirname(__FILE__), '..', 'lib/app.rb')
 
-Capybara.app = Bookmarks
+Capybara.app = Bookmarks_Manager
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
