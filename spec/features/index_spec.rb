@@ -8,8 +8,8 @@ end
 feature 'bookmarks' do
   scenario "should show the bookmarks" do
     visit '/bookmarks'
-    expect(page).to have_content "Makers"
-    expect(page).to have_content "Google"
-    expect(page).to have_content "Codewars"
+    expect(page).to have_content "http://instagram.com/"
+    expect(page).to have_content "https://en.airbnb.com/"
+    expect(page).to have_content "https://www.youtube.com/"
   end
 end

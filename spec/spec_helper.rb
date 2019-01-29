@@ -2,7 +2,7 @@ require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
 
-ENV["RAILS_ENV"] ||= 'test'
+ENV['ENVIRONMENT'] = 'test'
 
 require File.join(File.dirname(__FILE__), '..', 'lib/app.rb')
 
