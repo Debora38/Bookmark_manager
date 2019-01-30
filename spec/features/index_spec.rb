@@ -32,7 +32,7 @@ RSpec.describe "feature tests" do
 
   feature "delete" do
     scenario "should delete existing bookmark" do
-      page.driver.submit :delete, '/bookmarks/delete/1', {}
+      page.driver.submit :delete, '/bookmarks/1', {}
       expect(page).not_to have_content "Instagram"
       expect(page).to have_content "Airbnb"
     end

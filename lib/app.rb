@@ -5,8 +5,6 @@ class Bookmarks_Manager < Sinatra::Base
 
   enable :sessions
 
-  set :session_secret, "secret"
-
   get'/' do
     redirect '/bookmarks'
   end
@@ -25,12 +23,7 @@ class Bookmarks_Manager < Sinatra::Base
     redirect '/bookmarks'
   end
 
-  get "/bookmarks/delete/:id" do |id|
-    @id = id
-    erb :'bookmarks/delete'
-  end
-
-  delete "/bookmarks/delete/:id" do |id|
+  delete "/bookmarks/:id" do |id|
     Bookmark.delete(id)
     redirect '/bookmarks'
   end
