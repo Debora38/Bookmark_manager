@@ -5,6 +5,9 @@ class Bookmarks_Manager < Sinatra::Base
 
   enable :sessions
 
+
+  set :method_override, true
+
   get'/' do
     redirect '/bookmarks'
   end
@@ -25,6 +28,16 @@ class Bookmarks_Manager < Sinatra::Base
 
   delete "/bookmarks/:id" do |id|
     Bookmark.delete(id)
+    redirect '/bookmarks'
+  end
+
+  get '/bookmarks/:id/edit' do
+    @bookmark = Bookmark.find(params[:id])[0]
+    erb :'bookmarks/edit'
+  end
+
+  patch "/bookmarks/:id" do
+    Bookmark.edit(params[:id], params[:title], params[:url])
     redirect '/bookmarks'
   end
 

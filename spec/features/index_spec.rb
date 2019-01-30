@@ -37,4 +37,15 @@ RSpec.describe "feature tests" do
       expect(page).to have_content "Airbnb"
     end
   end
+
+  feature "edit" do
+    scenario "should edit an existing bookmark's title" do
+      visit '/'
+      first(:button, "Edit").click
+      fill_in "title", with: "Test change"
+      click_on "Save"
+      expect(page).not_to have_content "Instagram"
+      expect(page).to have_content "Test change"
+    end
+  end
 end

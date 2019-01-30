@@ -23,8 +23,18 @@ class Bookmark
 
   def self.delete(id)
     database_connection
-    p id
     @connection.exec( " DELETE FROM bookmarks WHERE id = #{id}")
+  end
+
+  def self.find(id)
+    database_connection
+    result = @connection.exec( "SELECT * FROM bookmarks WHERE id = #{id}")
+    result.map { |bookmark| Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url']) }
+  end
+
+  def self.edit(id, title, url)
+    database_connection
+    @connection.exec( "UPDATE bookmarks SET url = '#{url}', title = '#{title}' WHERE id = #{id};")
   end
 
  private
