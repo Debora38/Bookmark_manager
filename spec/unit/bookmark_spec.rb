@@ -20,4 +20,12 @@ RSpec.describe Bookmark do
       expect(Bookmark.all.last.title).to include("Facebook")
     end
   end
+
+  context "#.delete" do
+    it "should delete an existing bookmark" do
+      Bookmark.delete(2)
+      expect(Bookmark.all[1].title).not_to eq("Airbnb")
+      expect(Bookmark.all[1].title).to include("YouTube")
+    end
+  end
 end

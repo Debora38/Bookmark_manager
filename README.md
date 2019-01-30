@@ -24,6 +24,12 @@ In order to save websites I like
 I want to add new bookmarks
 ```
 
+```
+As a user
+In order to remove websites I don't need anymore
+I want to delete existing bookmarks
+```
+
 |View     | App          | Controller    | DB      |
 |---------|------------------|-----------|---------|
 |bookmarks.erb| Bookmarks_Manager| Bookmark | bookmarks |
@@ -42,3 +48,15 @@ I want to add new bookmarks
   - Create the database using the psql command CREATE DATABASE bookmark_manager_test;
   - Connect to the database using the pqsl command \c bookmark_manager_test;
   - Run the query we have saved in the file 01_create_bookmarks_table.sql
+
+  ### Alter table adding title column in Test enviroment
+  - Connect to psql
+  - Create the database using the psql command CREATE DATABASE bookmark_manager_test;
+  - Connect to the database using the pqsl command \c bookmark_manager_test;
+  - Run the query we have saved in the file 02_alter_table_with_title_column.sql
+
+  ### Alter table adding title column
+  - Connect to psql
+  - Create the database using the psql command CREATE DATABASE bookmark_manager;
+  - Connect to the database using the pqsl command \c bookmark_manager;
+  - Run the query we have saved in the file 02_alter_table_with_title_column.sql
