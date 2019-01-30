@@ -13,3 +13,12 @@ feature 'bookmarks' do
     expect(page).to have_content "https://www.youtube.com/"
   end
 end
+
+feature "add" do
+  scenario "should add new bookmarks" do
+    visit '/bookmarks'
+    fill_in "url", with: "www.booking.com"
+    click_on "Save"
+    expect(page).to have_content "www.booking.com"
+  end
+end

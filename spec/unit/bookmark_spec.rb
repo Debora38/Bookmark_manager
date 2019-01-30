@@ -9,4 +9,11 @@ RSpec.describe Bookmark do
       expect(Bookmark.all).to include('https://www.youtube.com/')
     end
   end
+
+  context "#.create" do
+    it "should add a new bookmark" do
+      Bookmark.create("www.facebook.com")
+      expect(Bookmark.all).to include("www.facebook.com")
+    end
+  end
 end
