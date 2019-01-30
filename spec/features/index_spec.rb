@@ -14,18 +14,19 @@ RSpec.describe "feature tests" do
   feature 'bookmarks' do
     scenario "should show the bookmarks" do
       visit '/bookmarks'
-      expect(page).to have_content "http://instagram.com/"
-      expect(page).to have_content "https://en.airbnb.com/"
-      expect(page).to have_content "https://www.youtube.com/"
+      expect(page).to have_content "Instagram"
+      expect(page).to have_content "Airbnb"
+      expect(page).to have_content "YouTube"
     end
   end
 
-  feature "add" do
+  feature "create" do
     scenario "should add new bookmarks" do
       visit '/bookmarks/new'
+      fill_in "title", with: "Booking.com"
       fill_in "url", with: "www.booking.com"
       click_on "Save"
-      expect(page).to have_content "www.booking.com"
+      expect(page).to have_content "Booking.com"
     end
   end
 end

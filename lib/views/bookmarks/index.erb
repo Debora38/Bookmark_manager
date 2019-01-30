@@ -2,7 +2,7 @@
  <h1>Bookmarks Manager</h1>
 
 <% @bookmarks.each do |bookmark| %>
-  <li><%= bookmark %></li>
+  <li><a href="<% bookmark.url %>"> <%= bookmark.title %> </a></li>
 <% end %>
 
 </html>
