@@ -1,6 +1,11 @@
 require 'bookmarks'
+require 'web-helper'
 
 RSpec.describe Bookmark do
+
+  before (:all) do
+    test_configure
+  end
 
   context "#.all" do
     it "should contain the urls" do
