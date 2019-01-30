@@ -1,14 +1,8 @@
 <html>
  <h1>Bookmarks Manager</h1>
- 
+
 <% @bookmarks.each do |bookmark| %>
   <li><%= bookmark %></li>
 <% end %>
-<br>
-<form action="/bookmarks" method='post'>
-  Website URL:<br>
-  <input type="text" name="url">
-  <input type="submit" value="Save">
-</form>
 
 </html>

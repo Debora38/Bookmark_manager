@@ -3,6 +3,12 @@
     "coverage": {
       "/Users/debora/Projects/week4/bookmark/spec/features/index_spec.rb": [
         1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
         1,
         1,
         1,
@@ -24,13 +30,19 @@
         1,
         1,
         1,
+        null,
         null,
         null
       ],
       "/Users/debora/Projects/week4/bookmark/spec/unit/bookmark_spec.rb": [
         1,
+        1,
         null,
         1,
+        null,
+        1,
+        1,
+        null,
         null,
         1,
         1,
@@ -49,6 +61,6 @@
         null
       ]
     },
-    "timestamp": 1548857843
+    "timestamp": 1548859680
   }
 }
