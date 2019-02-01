@@ -6,7 +6,7 @@ The website will have the following specification:
  - Add new bookmarks
  - Delete bookmarks
  - Update bookmarks
- - Comment on bookmarks
+ - Comment on bookmarksC
  - Tag bookmarks into categories
  - Filter bookmarks by tag
  - Users manage their bookmarks

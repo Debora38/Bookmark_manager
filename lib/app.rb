@@ -1,10 +1,9 @@
 require 'sinatra/base'
 require_relative 'bookmarks'
 
-class Bookmarks_Manager < Sinatra::Base
+class Bookmarks_Manager < Sinatra::Base 
 
   enable :sessions
-
 
   set :method_override, true
 
